@@ -33,6 +33,14 @@ https://templatemo.com/tm-558-klassy-cafe
     </head>
     
     <body>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2 class="popup-title">¡Inauguración Próxima!</h2>
+                <p class="popup-text">¡Te esperamos el próximo 20 de Julio para nuestra gran inauguración!</p>
+            </div>
+        </div
     
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
@@ -404,5 +412,17 @@ https://templatemo.com/tm-558-klassy-cafe
         });
 
     </script>
+
+    <script>// Mostrar el popup al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('popup').style.display = 'block';
+            }, 2000); // Mostrar el popup después de 2 segundos (ajustar según sea necesario)
+        });
+        
+        // Función para cerrar el popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }</script>
   </body>
 </html>
