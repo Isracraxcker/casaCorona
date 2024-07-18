@@ -412,6 +412,8 @@ https://templatemo.com/tm-558-klassy-cafe
         });
 
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@vercel/analytics"></script>
+
 
     <script>// Mostrar el popup al cargar la página
         document.addEventListener('DOMContentLoaded', function() {
@@ -424,5 +426,15 @@ https://templatemo.com/tm-558-klassy-cafe
         function closePopup() {
             document.getElementById('popup').style.display = 'none';
         }</script>
+
+<script>
+  // Llama a inject() después de que se haya cargado el script
+  window.onload = function() {
+      // Llama a la función inject() para iniciar el rastreo de analytics
+      if (typeof inject === 'function') {
+          inject();
+      }
+  }
+  </script>
   </body>
 </html>
